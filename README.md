@@ -1,8 +1,21 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Getting Started with Page Builder for Strapi
 
-First, run the development server:
+Visit (https://pagebuilder.wc8.io)[https://pagebuilder.wc8.io] for the complete docs.
+
+## Quickstart
+
+Create a `.env` file with the following values
+```STRAPI_ADMIN_TOKEN=[Generate in your Strapi Admin]
+PAGE_BUILDER_API_KEY=[Get one free at (https://pagebuilder.wc8.io)[https://pagebuilder.wc8.io]]
+NEXT_PUBLIC_API_URL=http://localhost:1337/api
+NEXT_PUBLIC_IMAGE_URL=http://localhost:1337
+```
+
+Ensure you've installed the (@wecre8websites/strapi-page-builder)[https://www.npmjs.com/package/@wecre8websites/strapi-page-builder] plugin in Strapi and set it up according to the docs. Your Page Builder editor URL is (http://localhost:3000/editor)[http://localhost:3000/editor]
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +27,6 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the live version of your site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+You can start editing the page by opening Page Builder from the sidebar in your Strapi Admin.
