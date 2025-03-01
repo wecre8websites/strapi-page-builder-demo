@@ -6,14 +6,19 @@ Visit (https://pagebuilder.wc8.io)[https://pagebuilder.wc8.io] for the complete 
 
 ## Quickstart
 
-Create a `.env` file with the following values
-```STRAPI_ADMIN_TOKEN=[Generate in your Strapi Admin]
-PAGE_BUILDER_API_KEY=[Get one free at (https://pagebuilder.wc8.io)[https://pagebuilder.wc8.io]]
+If you have not already done so, bootstrap a Strapi CMS with Page Builder pre-configured in a different folder by running `npx create-strapi-app@latest cms --template https://github.com/wecre8websites/strapi-page-builder-cms`. Both Strapi and NextJS will need to run at the same time.
+
+(Create a Read-only API token in your Strapi Admin)[http://localhost:1337/admin/settings/api-tokens]
+(Sign up for a free Page Builder API key)[https://pagebuilder.wc8.io]
+
+Create a `.env` file with the following values adding in the tokens created above.
+```STRAPI_ADMIN_TOKEN=...
+PAGE_BUILDER_API_KEY=...
 NEXT_PUBLIC_API_URL=http://localhost:1337/api
 NEXT_PUBLIC_IMAGE_URL=http://localhost:1337
 ```
 
-Ensure you've installed the (@wecre8websites/strapi-page-builder)[https://www.npmjs.com/package/@wecre8websites/strapi-page-builder] plugin in Strapi and set it up according to the docs. Your Page Builder editor URL is (http://localhost:3000/editor)[http://localhost:3000/editor]
+If you're not using the Strapi template above, ensure you've installed the (@wecre8websites/strapi-page-builder)[https://www.npmjs.com/package/@wecre8websites/strapi-page-builder] plugin in Strapi and set it up according to the docs. Your Page Builder editor URL is (http://localhost:3000/editor)[http://localhost:3000/editor]
 
 Then, run the development server:
 
