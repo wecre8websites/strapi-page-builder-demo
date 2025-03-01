@@ -1,9 +1,9 @@
 import { processProps } from '@wecre8websites/strapi-page-builder-react/rsc';
 import Image from 'next/image';
 import { FC } from 'react';
-import HeroProps from './HeroProps';
+import { HeroProps } from './component.client';
 
-const HeroComponent: FC<HeroProps> = ({ id, puck: { metadata }, image, ...props }) => {
+export const HeroComponent: FC<HeroProps> = ({ id, puck: { metadata }, image, ...props }) => {
   const { heading, subheading } = processProps(props, metadata) as typeof props;
   return (
     <section id={id} className="bg-neutral-900 text-white pt-24 pb-16 min-h-[70vh] flex items-center">

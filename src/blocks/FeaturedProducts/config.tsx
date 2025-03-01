@@ -1,6 +1,7 @@
 'use client'
 import { ComponentConfig } from "@wecre8websites/strapi-page-builder-react";
-import FeaturedProducts, { FeaturedProductsProps } from ".";
+import { FeaturedProductsProps } from "./component";
+import { FeaturedProducts } from "./component.client";
 
 export const FeaturedProductsConfig: Omit<ComponentConfig<FeaturedProductsProps, FeaturedProductsProps>, "type"> = {
   fields: {

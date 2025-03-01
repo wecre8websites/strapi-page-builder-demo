@@ -1,9 +1,13 @@
-'use client';
-import { DropZone, processProps } from '@wecre8websites/strapi-page-builder-react';
+import { DefaultComponentProps, DropZone, processProps } from '@wecre8websites/strapi-page-builder-react';
 import { FC } from 'react';
-import { TestimonialGridProps } from './TestimonialGridProps';
 
-const TestimonialComponentGrid: FC<TestimonialGridProps> = ({ id, puck: { metadata }, ...props }) => {
+export interface TestimonialGridProps extends DefaultComponentProps {
+  heading?: string,
+  subheading?: string,
+  cta?:string
+}
+
+export const TestimonialGridComponent: FC<TestimonialGridProps> = ({ id, puck: { metadata }, ...props }) => {
   const { heading, subheading, cta } = processProps(props, metadata);
   return (
     <section id={id} className="py-16 bg-gray-50 dark:bg-neutral-900">
@@ -24,5 +28,3 @@ const TestimonialComponentGrid: FC<TestimonialGridProps> = ({ id, puck: { metada
     </section>
   );
 };
-
-export default TestimonialComponentGrid;

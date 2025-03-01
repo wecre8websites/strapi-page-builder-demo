@@ -8,7 +8,7 @@ export interface TestimonialItemProps extends DefaultComponentProps {
   rating: 1 | 2 | 3 | 4 | 5
 }
 
-const TestimonialItemComponent: FC<TestimonialItemProps> = ({ id, message, name, title, rating }) => {
+export const TestimonialItemComponent: FC<TestimonialItemProps> = ({ id, message, name, title, rating }) => {
   return (
     <div className="bg-white dark:bg-neutral-800 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col">
       <div className="flex-grow">
@@ -35,5 +35,3 @@ const TestimonialItemComponent: FC<TestimonialItemProps> = ({ id, message, name,
     </div>
   );
 };
-
-export default TestimonialItemComponent;

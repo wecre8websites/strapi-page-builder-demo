@@ -1,7 +1,6 @@
 'use client';
 import { ComponentConfig } from "@wecre8websites/strapi-page-builder-react";
-import TestimonialComponentGrid from "./TestimonialGridComponent.client";
-import { TestimonialGridProps } from "./TestimonialGridProps";
+import { TestimonialGridComponent, TestimonialGridProps } from "./component";
 
 export const TestimonialGridConfig: ComponentConfig<TestimonialGridProps> = {
   fields: {
@@ -15,5 +14,5 @@ export const TestimonialGridConfig: ComponentConfig<TestimonialGridProps> = {
     cta: "Read more reviews"
   },
   label: "Testimonial Container",
-  render: (data) => <TestimonialComponentGrid {...data} />
+  render: (data) => <TestimonialGridComponent {...data} />
 }

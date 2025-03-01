@@ -1,19 +1,19 @@
 'use client'
 import { Config } from "@wecre8websites/strapi-page-builder-react";
-import { CategoriesProps } from "./Categories";
-import { CategoriesConfig } from "./Categories/CategoriesConfig.client";
-import { FeaturedCategoryProps } from "./FeaturedCategory";
-import { FeaturedCategoryConfig } from "./FeaturedCategory/FeaturedCategoryConfig.client";
-import { FeaturedProductsProps } from "./FeaturedProducts";
-import { FeaturedProductsConfig } from "./FeaturedProducts/FeaturedProductsConfig.client";
-import { HeroConfig } from "./Hero/HeroConfig.client";
-import HeroProps from "./Hero/HeroProps";
-import { RootConfigClient } from "./Root";
-import RootProps from "./Root/RootProps";
-import { TestimonialGridConfig } from "./TestimonialGrid/TestimonialGridConfig.client";
-import { TestimonialGridProps } from "./TestimonialGrid/TestimonialGridProps";
-import { TestimonialItemProps } from "./TestimonialItem";
-import { TestimonialItemConfig } from "./TestimonialItem/TestimonialItemConfig.client";
+import { CategoriesConfig } from "./Categories/config";
+import { FeaturedCategoryConfig } from "./FeaturedCategory/config";
+import { FeaturedProductsConfig } from "./FeaturedProducts/config";
+import { TestimonialGridConfig } from "./TestimonialGrid/config";
+import { TestimonialItemProps } from "./TestimonialItem/component";
+import { TestimonialItemConfig } from "./TestimonialItem/config";
+import { RootProps } from "./Root/component";
+import { RootConfig } from "./Root/config";
+import { HeroProps } from "./Hero/component.client";
+import { HeroConfig } from "./Hero/config";
+import { TestimonialGridProps } from "./TestimonialGrid/component";
+import { FeaturedProductsProps } from "./FeaturedProducts/component";
+import { CategoriesProps } from "./Categories/component";
+import { FeaturedCategoryProps } from "./FeaturedCategory/component";
 
 type PageBuilderBlocks = {
   Hero: HeroProps,
@@ -38,7 +38,7 @@ const config: Config<PageBuilderBlocks, RootProps, "heros" | "features" | "testi
     features: { title: "Features", components: ["FeaturedProducts", "Categories", "FeaturedCategory"] },
     testimonials: { title: "Testimonials", components: ["TestimonialGrid", "TestimonialItem"] }
   },
-  root: RootConfigClient
+  root: RootConfig
 }
 
 export default config;

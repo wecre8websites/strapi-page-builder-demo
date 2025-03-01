@@ -1,8 +1,16 @@
 import { processProps } from "@wecre8websites/strapi-page-builder-react/rsc";
 import Image from "next/image";
 import { FC } from 'react';
-import { FeaturedProductsProps } from ".";
 import { Product } from "../../../types/Product";
+import { DefaultComponentProps } from "@wecre8websites/strapi-page-builder-react";
+
+export interface FeaturedProductsProps extends DefaultComponentProps {
+  heading?: string
+  subheading?: string
+  products: { product: Product }[]
+  atc: string,
+  cta: string,
+}
 
 const FeaturedProductsComponent: FC<FeaturedProductsProps & { inView?: boolean, locale: string }> = ({ id, puck: { metadata }, products, inView = true, locale, ...props }) => {
   const { heading, subheading, atc, cta } = processProps(props, metadata) as typeof props;

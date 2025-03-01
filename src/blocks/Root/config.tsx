@@ -1,6 +1,5 @@
 'use client'
-import { RootComponent } from "./RootComponent.client";
-import RootProps from "./RootProps";
+import { RootComponent, RootProps } from "./component";
 
 export const RootConfig:any = {
   fields: {

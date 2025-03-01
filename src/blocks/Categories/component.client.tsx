@@ -1,21 +1,10 @@
 'use client';
-import { DefaultComponentProps } from '@wecre8websites/strapi-page-builder-react';
 import { useParams } from 'next/navigation';
 import { FC } from 'react';
 import { useInView } from "react-intersection-observer";
-import { Category } from '../../../types/Category';
-import CategoriesComponent from './CategoriesComponent';
+import { CategoriesComponent, CategoriesProps } from './component';
 
-export interface CategoriesProps extends DefaultComponentProps {
-  heading: string;
-  subheading: string;
-  categories: {
-    category: Category;
-  }[]
-  cta: string;
-}
-
-const Categories: FC<CategoriesProps> = (props) => {
+export const Categories: FC<CategoriesProps> = (props) => {
   const params = useParams();
   const locale = params.locale as string;
   const { ref, inView, entry } = useInView({
@@ -28,5 +17,3 @@ const Categories: FC<CategoriesProps> = (props) => {
     </div>
   );
 };
-
-export default Categories;

@@ -1,7 +1,6 @@
 'use client'
 import { ComponentConfig } from "@wecre8websites/strapi-page-builder-react";
-import Hero from ".";
-import HeroProps from "./HeroProps";
+import { Hero, HeroProps } from "./component.client";
 
 export const HeroConfig: Omit<ComponentConfig<HeroProps, HeroProps>, "type"> = {
   fields: {

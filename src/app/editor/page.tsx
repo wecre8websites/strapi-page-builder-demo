@@ -1,6 +1,6 @@
 import { Editor } from "@wecre8websites/strapi-page-builder-react";
 import { notFound } from "next/navigation";
-import config from "../../blocks/config.client";
+import config from "../../blocks/PageBuilderConfig";
 import strapiConfig from "@/config/strapiConfig";
 export default async function EditorPage({ searchParams }: { searchParams: Promise<{ _pagebuilderToken?: string }> }) {
   const { _pagebuilderToken } = await searchParams;

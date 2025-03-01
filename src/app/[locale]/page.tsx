@@ -1,7 +1,7 @@
 import strapiConfig from "@/config/strapiConfig";
 import { Render } from "@wecre8websites/strapi-page-builder-react";
 import { notFound } from "next/navigation";
-import config from "../../blocks/config.client";
+import config from "../../blocks/PageBuilderConfig";
 import "../globals.css";
 
 export const revalidate = 60

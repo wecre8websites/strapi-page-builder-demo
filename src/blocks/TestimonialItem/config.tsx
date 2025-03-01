@@ -1,6 +1,6 @@
 'use client';
 import { ComponentConfig } from "@wecre8websites/strapi-page-builder-react";
-import TestimonialItemComponent, { TestimonialItemProps } from ".";
+import { TestimonialItemComponent, TestimonialItemProps } from "./component";
 
 export const TestimonialItemConfig: ComponentConfig<TestimonialItemProps> = {
   fields: {

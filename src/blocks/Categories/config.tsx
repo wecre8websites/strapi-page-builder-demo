@@ -1,6 +1,7 @@
 'use client'
 import { ComponentConfig } from "@wecre8websites/strapi-page-builder-react";
-import Categories, { CategoriesProps } from ".";
+import { Categories } from "./component.client";
+import { CategoriesProps } from "./component";
 
 export const CategoriesConfig: Omit<ComponentConfig<CategoriesProps, CategoriesProps>, "type"> = {
   fields: {
@@ -10,12 +11,22 @@ export const CategoriesConfig: Omit<ComponentConfig<CategoriesProps, CategoriesP
       type: "array",
       label: "Categories",
       arrayFields: {
-        category: { type: "strapi", contentType: "api::collection.collection", populate: ["populate[0]=localizations", "populate[1]=image", "populate[2]=products.localizations", "populate[3]=products.media", "populate[4]=localizations.products.media"] },
+        category: {
+          type: "strapi",
+          contentType: "api::collection.collection",
+          populate: [
+            "populate[0]=localizations",
+            "populate[1]=image",
+            "populate[2]=products.localizations",
+            "populate[3]=products.media",
+            "populate[4]=localizations.products.media"
+          ]
+        },
       },
       getItemSummary: (item) => item?.category?.title || "Category",
       max: 6
     },
-    cta:{ type: "text", label: "Call to action" }
+    cta: { type: "text", label: "Call to action" }
   },
   defaultProps: {
     heading: "Shop by Categories",

@@ -1,11 +1,15 @@
-import { processProps } from '@wecre8websites/strapi-page-builder-react';
+import { DefaultComponentProps, processProps } from '@wecre8websites/strapi-page-builder-react';
 import Image from 'next/image';
 import { FC } from 'react';
-import { FeaturedCategoryProps } from '.';
+import { Category } from '../../../types/Category';
 
+export interface FeaturedCategoryProps extends DefaultComponentProps {
+  heading?: string
+  subheading?: string
+  category?: Category
+}
 
-
-const FeaturedCategoryComponent: FC<FeaturedCategoryProps & { inView: boolean, locale: string }> = ({ id, puck: { metadata }, category: coreCategory, inView = false, locale, ...props }) => {
+export const FeaturedCategoryComponent: FC<FeaturedCategoryProps & { inView: boolean, locale: string }> = ({ id, puck: { metadata }, category: coreCategory, inView = false, locale, ...props }) => {
   const { heading, subheading, atc, cta } = processProps(props, metadata || {})
   const category = coreCategory?.localizations?.find((category) => category.locale === locale) || coreCategory;
   function randomNumber(min: number, max: number) {
@@ -72,5 +76,3 @@ const FeaturedCategoryComponent: FC<FeaturedCategoryProps & { inView: boolean, l
     </section>
   );
 };
-
-export default FeaturedCategoryComponent;

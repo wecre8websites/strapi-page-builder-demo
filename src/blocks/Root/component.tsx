@@ -1,9 +1,18 @@
 'use client';
-import { DropZone } from "@wecre8websites/strapi-page-builder-react";
+import { DefaultComponentProps, DropZone } from "@wecre8websites/strapi-page-builder-react";
 import { FC, ReactElement } from "react";
 import FooterComponent from "./Footer";
 import HeaderComponent from "./Header";
-import RootProps from "./RootProps";
+
+export interface RootProps extends DefaultComponentProps {
+  siteName: string;
+  menu: any,
+  logo?: {
+    src: string;
+    alt: string;
+  };
+  children: React.ReactNode;
+}
 
 export const RootComponent: FC<RootProps> = ({ children, puck: { metadata }, menu, siteName, logo }) => {
   return (
