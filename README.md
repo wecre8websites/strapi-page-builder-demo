@@ -6,7 +6,7 @@ Visit https://pagebuilder.wc8.io for the complete docs.
 
 ## Quickstart
 
-If you have not already done so, bootstrap a Strapi CMS with Page Builder pre-configured in a different folder by running `npx create-strapi-app@latest cms --template https://github.com/wecre8websites/strapi-page-builder-cms`. Both Strapi and NextJS will need to run at the same time.
+If you have not already done so, bootstrap a Strapi CMS with Page Builder pre-configured in a different folder by running `npx create-strapi-app@latest cms --template https://github.com/wecre8websites/strapi-page-builder-cms --template-branch master`. Both Strapi and NextJS will need to run at the same time.
 
 [Create a Read-only API token in your Strapi Admin](http://localhost:1337/admin/settings/api-tokens)
 [Sign up for a free Page Builder API key](https://pagebuilder.wc8.io)
