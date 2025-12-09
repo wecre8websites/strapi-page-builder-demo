@@ -11,11 +11,11 @@
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.6.0",
     "@strapi/blocks-react-renderer": "^1.0.2",
-    "@wecre8websites/strapi-page-builder-react": "^1.0.7",
+    "@wecre8websites/strapi-page-builder-react": "^1.1.2",
     "animate.css": "^4.1.1",
     "handlebars": "^4.7.8",
     "negotiator": "^1.0.0",
-    "next": "15.1.7",
+    "next": "15.1.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-intersection-observer": "^9.15.1"
@@ -25,6 +25,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "husky": "^9.1.7",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
@@ -36,5 +37,6 @@
     "onlyBuiltDependencies": [
       "sharp"
     ]
-  }
+  },
+  "packageManager": "pnpm@10.3.0+sha512.ee592eda8815a8a293c206bb0917c4bb0ff274c50def7cbc17be05ec641fc2d1b02490ce660061356bd0d126a4d7eb2ec8830e6959fb8a447571c631d5a2442d"
 }

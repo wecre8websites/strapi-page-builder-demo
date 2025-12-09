@@ -86,11 +86,11 @@ const FooterComponent: FC<FooterComponentProps> = ({ siteName }) => {
 
         <div className="border-t border-neutral-800 mt-10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-neutral-400 mb-4 md:mb-0">© {new Date().getFullYear()} {siteName}. All rights reserved.</p>
+            <p className="text-sm text-neutral-300 mb-4 md:mb-0">© {new Date().getFullYear()} {siteName}. All rights reserved.</p>
             <div className="flex space-x-6">
-              <a href="#" className="text-sm text-neutral-400 hover:text-white transition">Privacy Policy</a>
-              <a href="#" className="text-sm text-neutral-400 hover:text-white transition">Terms of Service</a>
-              <a href="#" className="text-sm text-neutral-400 hover:text-white transition">Cookie Policy</a>
+              <a href="#" className="text-sm text-neutral-300 hover:text-white transition">Privacy Policy</a>
+              <a href="#" className="text-sm text-neutral-300 hover:text-white transition">Terms of Service</a>
+              <a href="#" className="text-sm text-neutral-300 hover:text-white transition">Cookie Policy</a>
             </div>
           </div>
         </div>
