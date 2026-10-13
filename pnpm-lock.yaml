@@ -1118,7 +1118,7 @@ packages:
     resolution: {integrity: sha512-67MQl+fpWKVTT1NYdnmo3U4sc/xPo/zQBncVnI74qmQa0z/b+1g6iYqNmGCPbxO+zz2aklb08a0oHfegiVd0/w==}
 
   '@wecre8websites/strapi-page-builder-react@file:../strapi-page-builder-react/wecre8websites-strapi-page-builder-react-1.2.0.tgz':
-    resolution: {integrity: sha512-X/aMX5z9pDb4x/ryd1R6od5y/eG9Mi71h2DvHDHhxwbj9AWz31D7YP+AcDojvPcdlWJZGKd6qA8iDE47lXjzKw==, tarball: file:../strapi-page-builder-react/wecre8websites-strapi-page-builder-react-1.2.0.tgz}
+    resolution: {integrity: sha512-hGzT3BJulwzsvi4QCLvUiWlfmAGjQuzilChqecaaI/pKrlYlUT96W05UmnTCgirOgRdsiHcRRAwoRi0zUMy3oQ==, tarball: file:../strapi-page-builder-react/wecre8websites-strapi-page-builder-react-1.2.0.tgz}
     version: 1.2.0
     hasBin: true
     peerDependencies:

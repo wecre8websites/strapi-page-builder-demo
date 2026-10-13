@@ -1,5 +1,8 @@
 import type { NextConfig } from "next";
 
+// Strapi's uploads host comes from NEXT_PUBLIC_IMAGE_URL (default: a local Strapi on 1337)
+const strapiImages = new URL(process.env.NEXT_PUBLIC_IMAGE_URL || "http://localhost:1337");
+
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
@@ -7,9 +10,9 @@ const nextConfig: NextConfig = {
     dangerouslyAllowLocalIP: process.env.NODE_ENV !== 'production',
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '1337',
+        protocol: strapiImages.protocol.replace(":", "") as "http" | "https",
+        hostname: strapiImages.hostname,
+        port: strapiImages.port,
         pathname: '/uploads/**',
         search: '',
       },
