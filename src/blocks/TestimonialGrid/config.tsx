@@ -6,9 +6,11 @@ export const TestimonialGridConfig: ComponentConfig<TestimonialGridProps> = {
   fields: {
     heading: { type: "text", label: "Heading" },
     subheading: { type: "text", label: "Subheading" },
-    cta: { type: "text", label: "Call to action" }
+    cta: { type: "text", label: "Call to action" },
+    items: { type: "slot", allow: ["TestimonialItem"] }
   },
   defaultProps: {
+    items: [],
     heading: "What Our Customers Say",
     subheading: "Discover why people love our products and shopping experience",
     cta: "Read more reviews"

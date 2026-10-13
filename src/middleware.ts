@@ -12,10 +12,14 @@ function getLocale(request: NextRequest): string | undefined {
 
   // @ts-ignore locales are readonly
   const locales: string[] = i18n.locales
-  const languages = new Negotiator({ headers: negotiatorHeaders }).languages()
+  // no Accept-Language gives ["*"], which the matcher rejects
+  const languages = new Negotiator({ headers: negotiatorHeaders }).languages().filter(language => language !== "*")
 
-  const locale = matchLocale(languages, locales, i18n.defaultLocale)
-  return locale
+  try {
+    return matchLocale(languages, locales, i18n.defaultLocale)
+  } catch {
+    return i18n.defaultLocale
+  }
 }
 
 export function middleware(request: NextRequest) {

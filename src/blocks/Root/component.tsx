@@ -1,5 +1,5 @@
 'use client';
-import { DefaultComponentProps, DropZone } from "@wecre8websites/strapi-page-builder-react";
+import { DefaultComponentProps } from "@wecre8websites/strapi-page-builder-react";
 import { FC, ReactElement } from "react";
 import FooterComponent from "./Footer";
 import HeaderComponent from "./Header";
@@ -24,7 +24,7 @@ export const RootComponent: FC<RootProps> = ({ children, puck: { metadata }, men
       <HeaderComponent siteName={siteName} logo={logo} menu={menu} />
 
       <main id="main-content">
-        <DropZone zone="default-zone" style={{ flexGrow: 1 }} className="flex-1 relative h-full" />
+        <div className="flex-1 relative h-full" style={{ flexGrow: 1 }}>{children}</div>
       </main>
       <FooterComponent siteName={siteName} />
 
