@@ -1,4 +1,3 @@
-'use client';
 import { ComponentConfig } from "@wecre8websites/strapi-page-builder-react";
 import { TestimonialItemComponent, TestimonialItemProps } from "./component";
 

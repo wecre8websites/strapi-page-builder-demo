@@ -1,5 +1,5 @@
 import strapiConfig from "@/config/strapiConfig";
-import { Render } from "@wecre8websites/strapi-page-builder-react";
+import { ServerRender, resolveAllData } from "@wecre8websites/strapi-page-builder-react/rsc";
 import { notFound } from "next/navigation";
 import config from "../../blocks/PageBuilderConfig";
 import "../globals.css";
@@ -33,11 +33,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
   const { template, ...content } = await getCMSContent(locale)
   if (!template?.json || !content) return notFound();
-  return <Render
-    config={config}
-    data={{
-      templateJson: template.json,
-      content
-    }}
-    strapi={{ ...strapiConfig, locale }} />;
+  // resolve Strapi fields (products, categories, menu...) and render everything on the server
+  const templateJson = await resolveAllData({ ...strapiConfig, locale }, template.json, config, content)
+  return <ServerRender config={config} data={{ templateJson, content }} />;
 }

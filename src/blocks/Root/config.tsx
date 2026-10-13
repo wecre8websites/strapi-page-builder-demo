@@ -1,4 +1,4 @@
-'use client'
+import cleanProps from "@/lib/cleanProps";
 import { RootComponent, RootProps } from "./component";
 
 export const RootConfig:any = {
@@ -47,5 +47,5 @@ export const RootConfig:any = {
       }
     }
   },
-  render: (data: RootProps) => <RootComponent {...data} />,
+  render: (data: RootProps) => <RootComponent {...cleanProps(data)} />,
 }

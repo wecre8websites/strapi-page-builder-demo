@@ -1,4 +1,4 @@
-'use client'
+import cleanProps from "@/lib/cleanProps";
 import { ComponentConfig } from "@wecre8websites/strapi-page-builder-react";
 import { Hero, HeroProps } from "./component.client";
 
@@ -34,5 +34,5 @@ export const HeroConfig: Omit<ComponentConfig<HeroProps, HeroProps>, "type"> = {
       { url: "#", text: "Explore Categories" },
     ]
   },
-  render: (data) => <Hero {...data} />
+  render: (data) => <Hero {...cleanProps(data)} />
 }

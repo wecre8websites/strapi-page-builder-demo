@@ -1,4 +1,3 @@
-'use client'
 import { Config } from "@wecre8websites/strapi-page-builder-react";
 import { CategoriesConfig } from "./Categories/config";
 import { FeaturedCategoryConfig } from "./FeaturedCategory/config";

@@ -1,4 +1,4 @@
-'use client'
+import cleanProps from "@/lib/cleanProps";
 import { ComponentConfig } from "@wecre8websites/strapi-page-builder-react";
 import { FeaturedProductsProps } from "./component";
 import { FeaturedProducts } from "./component.client";
@@ -27,5 +27,5 @@ export const FeaturedProductsConfig: Omit<ComponentConfig<FeaturedProductsProps,
     cta: "View all products"
   },
   label: "Featured Products",
-  render: (data) => <FeaturedProducts {...data} />
+  render: (data) => <FeaturedProducts {...cleanProps(data)} />
 }

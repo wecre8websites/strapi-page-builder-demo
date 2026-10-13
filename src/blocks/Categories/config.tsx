@@ -1,4 +1,4 @@
-'use client'
+import cleanProps from "@/lib/cleanProps";
 import { ComponentConfig } from "@wecre8websites/strapi-page-builder-react";
 import { Categories } from "./component.client";
 import { CategoriesProps } from "./component";
@@ -71,5 +71,5 @@ export const CategoriesConfig: Omit<ComponentConfig<CategoriesProps, CategoriesP
     cta: "Shop now"
   },
   label: "Categories",
-  render: (data) => <Categories {...data} />
+  render: (data) => <Categories {...cleanProps(data)} />
 }
