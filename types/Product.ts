@@ -13,7 +13,7 @@ export interface Product {
   media?: Media[];
   attributes?: Attribute[];
   collections?: Collection[];
-  localizations?: any[];
+  localizations?: Product[];
 }
 
 export interface Attribute {

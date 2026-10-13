@@ -1,6 +1,7 @@
 'use client'
 import { ComponentConfig } from "@wecre8websites/strapi-page-builder-react";
-import FeaturedCategory, { FeaturedCategoryProps } from "./component.client";
+import FeaturedCategory from "./component.client";
+import { FeaturedCategoryProps } from "./component";
 
 export const FeaturedCategoryConfig: Omit<ComponentConfig<FeaturedCategoryProps, FeaturedCategoryProps>, "type"> = {
   fields: {
